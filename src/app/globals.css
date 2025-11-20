@@ -1,21 +1,31 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FFFFF0;
   --foreground: #171717;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* ✅ ADD THESE COLORS HERE — NOT IN tailwind.config.js */
+  --color-primary: #FF9933;
+  --color-secondary: #FFD700;
+  --color-tertiary: #4B6F44;
+  --color-accent: #1E3A8A;
+  --color-default: #333333;
+  /* <— this fixes `text-default` */
+  --color-info: #666666;
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFF0;
+    --foreground: #F9FAFB;
   }
 }
 
