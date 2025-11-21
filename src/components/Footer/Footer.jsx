@@ -24,7 +24,7 @@ function Footer() {
                 <h3 className="text-xl font-bold text-default mb-6">Quick links</h3>
                 <ul className="list-none space-y-3.5">
                     <li>
-                        <a href="#" className="text-default no-underline text-sm ">
+                        <a href="/aboutus" className="text-default no-underline text-sm ">
                             About Us
                         </a>
                     </li>

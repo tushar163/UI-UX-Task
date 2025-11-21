@@ -87,11 +87,11 @@ function page() {
     return (
         <div className='flex flex-col items-center w-full h-full md:pt-16 md:pb-64'>
             <div className='flex flex-col gap-4'>
-                <h1 className='text-4xl font-bold text-center text-default'>Our Team</h1>
+                <h1 className='text-4xl font-bold text-center text-default font-merriweather'>Our Team</h1>
                 <p className='text-info'>The dedicated individuals leading Vishwa Guru Bharat forward.</p>
             </div>
             <div className='mt-16 flex flex-col items-center gap-8'>
-                <h1 className='text-2xl font-bold text-default'>Leadership</h1>
+                <h1 className='text-2xl font-bold text-default font-merriweather'>Leadership</h1>
                 <div className='grid grid-cols-3 gap-11 '>
                     {
                         Leadership.map((team) => {
@@ -109,7 +109,7 @@ function page() {
                 </div>
             </div>
             <div className='mt-18 flex flex-col items-center gap-8'>
-                <h1 className='text-2xl font-bold text-default'>Our Members</h1>
+                <h1 className='text-2xl font-bold text-default font-merriweather'>Our Members</h1>
                 <div className='grid grid-cols-5 gap-11 '>
                     {
                         ourMembers.map((team) => {

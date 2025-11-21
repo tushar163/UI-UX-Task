@@ -9,7 +9,7 @@ const merriweather = Merriweather({
 })
 function Header() {
     const Links = [
-        { key: 1, title: "About VGB", link: "/about" },
+        { key: 1, title: "About VGB", link: "/aboutus" },
         { key: 2, title: "Our Work", link: "/work" },
         { key: 3, title: "Get Involved", link: "/getinvolved" },
         { key: 4, title: "Product Marketplace", link: "/product" },
