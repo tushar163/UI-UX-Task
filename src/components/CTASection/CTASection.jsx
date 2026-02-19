@@ -10,7 +10,7 @@ export default function CTASection() {
         >
             <div className="max-w-[1480px] mx-auto">
                 {/* Card — overflow-visible so image bleeds outside the rounded card */}
-                <div className="relative flex flex-col md:flex-row items-center justify-between bg-[#F3F3F3] rounded-3xl px-8 sm:px-12 py-10 sm:py-14 overflow-visible">
+                <div className="relative flex flex-col md:flex-row items-center justify-between bg-[#f2f2f2] rounded-3xl px-8 sm:px-12 py-10 sm:py-14 overflow-visible">
 
                     {/* ── Left: Text Content ── */}
                     <div className="flex flex-col gap-4 z-10 w-full md:w-1/2 max-w-md">

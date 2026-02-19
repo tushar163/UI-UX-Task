@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner/Banner'
+import CaseStudies from '@/components/CaseStudies/CaseStudies';
 import CTASection from '@/components/CTASection/CTASection';
 import ServicesSection from '@/components/SeriveSection/ServicesSection';
 import React from 'react'
@@ -35,6 +36,7 @@ function page() {
       </div>
       <ServicesSection />
       <CTASection />
+      <CaseStudies />
 
     </div>
   )
