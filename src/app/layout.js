@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Merriweather } from "next/font/google";
+import { Geist, Geist_Mono, Merriweather, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -6,17 +6,27 @@ import Footer from "@/components/Footer/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // must be array
+  display: "swap",
 });
 
 const merriweather = Merriweather({
-  weight: "400",
-  subsets: ["latin"],
   variable: "--font-merriweather",
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  display: "swap",
 });
 
 export const metadata = {
@@ -28,12 +38,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased bg-default text-default`}
+        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} ${spaceGrotesk.variable} antialiased bg-default text-default`}
       >
-        <div className=" sticky top-0 w-full z-50">
+        <div className="sticky top-0 w-full z-50">
           <Header />
         </div>
+
         {children}
+
         <Footer />
       </body>
     </html>

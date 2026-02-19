@@ -22,7 +22,7 @@ function page() {
     { name: "Google", url: "https://cdn.simpleicons.org/google" },
   ];
   return (
-    <div className='min-h-screen flex flex-col bg-default justify-center w-full'>
+    <div className='min-h-screen flex flex-col bg-default justify-center w-full font-space-grotesk'>
       <Banner />
       <div className="bg-default py-10">
         <marquee scrollamount="6">

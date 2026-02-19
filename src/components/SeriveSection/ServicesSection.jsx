@@ -7,7 +7,7 @@ const services = [
     {
         id: 1,
         title: "Search engine optimization",
-        image: "/asserts/service1.svg",
+        image: "/asserts/Illustration-1.webp",
         imageAlt: "Search engine optimization illustration",
         bg: "bg-default",
         titleBg: "bg-primary",
@@ -20,7 +20,7 @@ const services = [
     {
         id: 2,
         title: "Pay-per-click advertising",
-        image: "/services/ppc.png",
+        image: "/asserts/Illustration-2.webp",
         imageAlt: "Pay-per-click advertising illustration",
         bg: "bg-primary",
         titleBg: "bg-white",
@@ -33,7 +33,7 @@ const services = [
     {
         id: 3,
         title: "Social Media Marketing",
-        image: "/services/social-media.png",
+        image: "/asserts/Illustration.webp",
         imageAlt: "Social media marketing illustration",
         bg: "bg-dark",
         titleBg: "bg-white",
@@ -46,7 +46,7 @@ const services = [
     {
         id: 4,
         title: "Email Marketing",
-        image: "/services/email.png",
+        image: "/asserts/tokyo-sending-messages-from-one-place-to-another-1.webp",
         imageAlt: "Email marketing illustration",
         bg: "bg-default",
         titleBg: "bg-primary",
@@ -59,7 +59,7 @@ const services = [
     {
         id: 5,
         title: "Content Creation",
-        image: "/services/content.png",
+        image: "/asserts/illustration-3.webp",
         imageAlt: "Content creation illustration",
         bg: "bg-primary",
         titleBg: "bg-white",
@@ -72,7 +72,7 @@ const services = [
     {
         id: 6,
         title: "Analytics and Tracking",
-        image: "/services/analytics.png",
+        image: "/asserts/Illustration-4.webp",
         imageAlt: "Analytics and tracking illustration",
         bg: "bg-dark",
         titleBg: "bg-primary",
@@ -93,11 +93,11 @@ function ServiceCard({ service }) {
 
     return (
         <article
-            className={`relative flex flex-row items-center justify-between rounded-3xl border border-border p-6 sm:p-8 overflow-hidden min-h-[180px] sm:min-h-[210px] ${bg} group`}
+            className={`relative flex flex-row items-center justify-between shadow-[3px_3px_0px_0px_#1B1C24]  rounded-3xl border border-dark p-6 sm:p-8 overflow-hidden min-h-[180px] sm:min-h-[210px] ${bg} group`}
         >
             <div className="flex flex-col justify-between h-full gap-6 z-10 flex-1">
-                <h3 className={`text-lg sm:text-3xl font-semibold leading-snug ${titleColor}`}>
-                    <span className={`inline ${titleBg} px-1.5 py-0.5 rounded-md box-decoration-clone leading-relaxed`}>
+                <h3 className={`text-lg sm:text-3xl font-semibold leading-snug  ${titleColor}`}>
+                    <span className={`inline ${titleBg}  px-1.5 py-0.5 rounded-md box-decoration-clone `}>
                         {title}
                     </span>
                 </h3>
@@ -119,7 +119,7 @@ function ServiceCard({ service }) {
                     src={image}
                     alt={imageAlt}
                     fill
-                    className="object-cover text-black w-full h-full"
+                    className="object-contain text-black w-full h-full"
                 />
             </div>
         </article>
