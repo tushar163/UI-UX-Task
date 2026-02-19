@@ -25,14 +25,14 @@ function page() {
     <div className='min-h-screen flex flex-col bg-default justify-center w-full font-space-grotesk'>
       <Banner />
       <div className="bg-default py-10">
-        <marquee scrollamount="6">
+        <marquee >
           <div className="flex gap-16 items-center">
             {companyLogos.map((logo, index) => (
               <img
                 key={index}
                 src={logo.url}
                 alt={logo.name}
-                className="h-24 opacity-60 grayscale hover:opacity-100 transition"
+                className=" h-16 opacity-60 grayscale hover:opacity-100 transition"
               />
             ))}
           </div>
