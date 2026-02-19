@@ -57,7 +57,7 @@ export default function WorkingProcessSection() {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 mb-10 sm:mb-12">
                     <h2
                         id="process-heading"
-                        className="text-xl sm:text-2xl font-bold text-dark bg-primary px-3 py-1 rounded-lg flex-shrink-0 whitespace-nowrap"
+                        className="text-xl sm:text-2xl font-bold text-dark bg-primary px-3 py-1 rounded-lg flex shrink-0 whitespace-nowrap"
                     >
                         Our Working Process
                     </h2>
@@ -96,8 +96,7 @@ export default function WorkingProcessSection() {
                                     </div>
                                     <span
                                         className={`
-                                            flex-shrink-0 w-9 h-9 rounded-full border-2 border-dark
-                                            flex items-center justify-center transition-colors duration-200
+                                            flex shrink-0 w-9 h-9 rounded-full border-2 border-dark items-center justify-center transition-colors duration-200
                                             ${isOpen ? "bg-default" : "bg-default"}
                                         `}
                                         aria-hidden="true"

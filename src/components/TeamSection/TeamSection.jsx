@@ -59,12 +59,12 @@ function TeamCard({ member }) {
     const clipId = `flower-clip-${member.id}`;
 
     return (
-        <article className="flex flex-col gap-4 bg-default border-2 border-dark rounded-4xl p-5 shadow-[4px_4px_0px_0px_#1B1C24] relative">
+        <article className="flex flex-col gap-4 bg-default border-2 border-dark rounded-4xl p-5 shadow-[0px_4px_0px_0px_#1B1C24] relative">
             <div className="flex items-end justify-between relative">
                 <div className="flex items-end gap-3">
 
                     {/* ── Flower / Clover Avatar ── */}
-                    <div className="relative w-16 h-16 flex-shrink-0">
+                    <div className="relative w-16 h-16 flex shrink-0">
 
                         {/* Hidden SVG clip — 4 overlapping circles = clover/flower shape */}
                         <svg
@@ -120,7 +120,7 @@ function TeamCard({ member }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${member.name} LinkedIn profile`}
-                    className="w-8 h-8 rounded-full bg-dark absolute top-0 right-0 flex justify-center items-center flex-shrink-0 transition-opacity duration-200 hover:opacity-75"
+                    className="w-8 h-8 rounded-full bg-dark absolute top-0 right-0 flex justify-center items-center  shrink-0 transition-opacity duration-200 hover:opacity-75"
                 >
                     <Linkedin size={14} className="text-primary" />
                 </Link>
