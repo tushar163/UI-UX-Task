@@ -10,13 +10,12 @@
   --color-foreground: var(--foreground);
 
   /* ✅ ADD THESE COLORS HERE — NOT IN tailwind.config.js */
-  --color-primary: #FF9933;
-  --color-secondary: #FFD700;
-  --color-tertiary: #4B6F44;
-  --color-accent: #1E3A8A;
-  --color-default: #333333;
-  /* <— this fixes `text-default` */
-  --color-info: #666666;
+  --color-primary: #20aefa;
+  --color-secondary: #FB923C ;
+  --color-tertiary: #DC2626 ;
+  --color-accent: #A855F7 ;
+  --color-default: #292524 ;
+  --color-info: #78716C ;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -25,7 +24,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #FFFFF0;
+    --background: #f0faff;
     --foreground: #F9FAFB;
   }
 }
