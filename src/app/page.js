@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner/Banner'
+import CTASection from '@/components/CTASection/CTASection';
 import ServicesSection from '@/components/SeriveSection/ServicesSection';
 import React from 'react'
 
@@ -33,6 +34,7 @@ function page() {
         </marquee>
       </div>
       <ServicesSection />
+      <CTASection />
 
     </div>
   )

@@ -42,7 +42,7 @@ export default function Header() {
                 </nav>
 
                 {/* Desktop CTA */}
-                <div className="hidden md:block flex-shrink-0">
+                <div className="hidden md:block  shrink-0">
                     <Link
                         href="#"
                         className="text-sm font-medium text-dark border border-dark rounded-xl px-5 py-2.5 transition-all duration-200 hover:bg-dark hover:text-white"
