@@ -33,7 +33,7 @@ export default function Header() {
                     {navLinks.map((link) => (
                         <Link
                             key={link}
-                            href="#"
+                            href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
                             className="text-sm text-dark-soft hover:text-dark transition-colors duration-200"
                         >
                             {link}
@@ -79,7 +79,7 @@ export default function Header() {
                     <div className="mt-4 px-3">
                         <Link
                             href="#"
-                            className="block text-center text-sm font-medium text-dark border border-dark rounded-xl px-5 py-2.5 transition-all duration-200 hover:bg-dark hover:text-white"
+                            className="block text-center text-sm font-bold text-dark border border-dark rounded-xl px-5 py-2.5 transition-all duration-200 hover:bg-dark hover:text-white"
                             onClick={() => setMobileOpen(false)}
                         >
                             Request a quote

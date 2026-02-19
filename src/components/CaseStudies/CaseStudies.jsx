@@ -25,6 +25,7 @@ const caseStudies = [
 function CaseStudies() {
     return (
         <section
+            id="use-cases"
             aria-labelledby="case-studies-heading"
             className="w-full bg-default px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-20"
         >

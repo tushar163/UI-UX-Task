@@ -129,6 +129,7 @@ function ServiceCard({ service }) {
 export default function ServicesSection() {
     return (
         <section
+            id="services"
             aria-labelledby="services-heading"
             className="w-full bg-default px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-20"
         >

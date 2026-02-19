@@ -76,7 +76,7 @@ export default function WorkingProcessSection() {
                                 key={step.id}
                                 className={`
                                     rounded-4xl border-2 border-dark-soft px-6 sm:px-8 py-5 sm:py-6
-                                    transition-all duration-300 shadow-[3px_3px_0px_0px_#1B1C24]
+                                    transition-all duration-1000 delay-100 shadow-[3px_3px_0px_0px_#1B1C24]
                                     ${isOpen ? "bg-primary" : "bg-[#f3f3f3d8]"}
                                 `}
                             >
