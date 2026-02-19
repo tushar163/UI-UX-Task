@@ -26,8 +26,6 @@ export default function ContactSection() {
             className="w-full bg-default px-4 sm:px-6 lg:px-10 py-10 sm:py-14 lg:py-20"
         >
             <div className="max-w-[1480px] mx-auto">
-
-                {/* ── Section Header ── */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 mb-10 sm:mb-12">
                     <h2
                         id="contact-heading"
@@ -39,8 +37,8 @@ export default function ContactSection() {
                         Connect with Us: Let's Discuss Your Digital Marketing Needs
                     </p>
                 </div>
-                <div className="bg-[#f3f3f3cc] rounded-3xl px-6 sm:px-10 py-8 sm:py-12 flex flex-col md:flex-row gap-10 items-start justify-between">
-                    <div className="w-full md:w-1/2 flex flex-col gap-6">
+                <div className="bg-[#f3f3f3cc] rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch justify-between">
+                    <div className="w-full md:w-[55%] flex flex-col gap-6 px-6 sm:px-10 py-8 sm:py-12">
                         <div className="flex items-center gap-8">
                             {[
                                 { value: "say-hi", label: "Say Hi" },
@@ -74,60 +72,41 @@ export default function ContactSection() {
                                 </label>
                             ))}
                         </div>
-
-                        {/* Form */}
                         <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
 
-                            {/* Name */}
                             <div className="flex flex-col gap-1.5">
                                 <label htmlFor="name" className="text-xs sm:text-sm text-dark font-medium">
                                     Name
                                 </label>
                                 <input
-                                    id="name"
-                                    name="name"
-                                    type="text"
-                                    placeholder="Name"
-                                    value={form.name}
-                                    onChange={handleChange}
+                                    id="name" name="name" type="text" placeholder="Name"
+                                    value={form.name} onChange={handleChange}
                                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-dark outline-none transition-colors duration-200 focus:border-dark placeholder:text-border"
                                 />
                             </div>
 
-                            {/* Email */}
                             <div className="flex flex-col gap-1.5">
                                 <label htmlFor="email" className="text-xs sm:text-sm text-dark font-medium">
                                     Email<span aria-hidden="true">*</span>
                                 </label>
                                 <input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    placeholder="Email"
-                                    value={form.email}
-                                    onChange={handleChange}
-                                    required
+                                    id="email" name="email" type="email" placeholder="Email"
+                                    value={form.email} onChange={handleChange} required
                                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-dark outline-none transition-colors duration-200 focus:border-dark placeholder:text-border"
                                 />
                             </div>
 
-                            {/* Message */}
                             <div className="flex flex-col gap-1.5">
                                 <label htmlFor="message" className="text-xs sm:text-sm text-dark font-medium">
                                     Message<span aria-hidden="true">*</span>
                                 </label>
                                 <textarea
-                                    id="message"
-                                    name="message"
-                                    placeholder="Message"
-                                    rows={5}
-                                    value={form.message}
-                                    onChange={handleChange}
+                                    id="message" name="message" placeholder="Message" rows={5}
+                                    value={form.message} onChange={handleChange}
                                     className="w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-dark outline-none transition-colors duration-200 focus:border-dark placeholder:text-border resize-none"
                                 />
                             </div>
 
-                            {/* Submit button */}
                             <button
                                 type="submit"
                                 className="w-full bg-dark text-white text-sm font-semibold py-4 rounded-xl transition-all duration-200 hover:bg-dark-soft"
@@ -136,15 +115,13 @@ export default function ContactSection() {
                             </button>
                         </form>
                     </div>
-                    <div className="hidden md:flex w-full md:w-1/2 items-center justify-end self-stretch">
-                        <div className="relative w-full h-full min-h-80">
-                            <Image
-                                src="/asserts/contact-us.webp"
-                                alt="Decorative illustration with sparkle and starburst shapes for the contact section"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
+                    <div className="hidden md:block relative w-[45%] self-stretch min-h-[420px]">
+                        <Image
+                            src="/asserts/contact-us.webp"
+                            alt="Decorative sparkle and starburst illustration"
+                            fill
+                            className="object-contain object-bottom-right"
+                        />
                     </div>
 
                 </div>
