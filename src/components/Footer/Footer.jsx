@@ -1,97 +1,161 @@
-import { Mail, Phone } from 'lucide-react'
-import Image from 'next/image'
-import React from 'react'
+"use client"
+import { Facebook, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
-function Footer() {
+const SparkleIcon = () => (
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+        {/* 4-pointed sparkle star */}
+        <path
+            d="M16 2 C16 2, 17.5 10, 16 16 C16 16, 10 17.5, 2 16 C2 16, 10 14.5, 16 16 C16 16, 14.5 8, 16 2Z"
+            fill="#FFFFFF"
+        />
+        <path
+            d="M16 30 C16 30, 14.5 22, 16 16 C16 16, 22 14.5, 30 16 C30 16, 22 17.5, 16 16 C16 16, 17.5 24, 16 30Z"
+            fill="#FFFFFF"
+        />
+        <path
+            d="M2 16 C2 16, 10 14.5, 16 16 C16 16, 17.5 10, 16 2 C16 2, 14.5 10, 16 16 C16 16, 10 17.5, 2 16Z"
+            fill="#FFFFFF"
+            opacity="0"
+        />
+        {/* Cleaner approach: simple 4-point star */}
+        <path
+            d="M16 1 L18.2 13.8 L31 16 L18.2 18.2 L16 31 L13.8 18.2 L1 16 L13.8 13.8 Z"
+            fill="#FFFFFF"
+        />
+        {/* Small center glow */}
+        <circle cx="16" cy="16" r="2.5" fill="#FFFFFF" opacity="0.4" />
+    </svg>
+);
+
+export default function Footer() {
+    const [email, setEmail] = useState("");
+    const [subscribed, setSubscribed] = useState(false);
+
+    const handleSubscribe = () => {
+        if (email.trim()) {
+            setSubscribed(true);
+            setEmail("");
+            setTimeout(() => setSubscribed(false), 3000);
+        }
+    };
+
+    const navLinks = ["About us", "Services", "Use Cases", "Pricing", "Blog"];
+
     return (
-        <footer className="w-full bg-linear-to-br from-primary to-secondary/50 px-20 py-15 flex flex-wrap justify-between items-start">
-            {/* Logo Section */}
-            <div className="flex-1 ">
-                <div className="flex items-center gap-2.5 mb-5">
-                    <Image src="/Logo/VGB_LOGO.png" alt="logo" width={1000} height={1000} className=' md:w-[225px] h-[70px] object-cover' />
+        <footer className="w-full px-4 sm:px-6 lg:px-10 py-8 sm:py-10 rounded-t-3xl bg-dark">
+
+            {/* ── Top Row: Logo / Nav / Socials ── */}
+            <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-5 mb-8 sm:mb-10">
+
+                {/* Logo */}
+                <div className="flex items-center gap-2">
+                    <SparkleIcon />
+                    <span className="text-white font-semibold text-xl tracking-tight">Positivus</span>
                 </div>
-                <p className="text-sm text-[#2c5530] leading-relaxed mt-3.5">
-                    Preserving and promoting{' '} <br></br>
-                    <a href="#" className="text-accent no-underline font-medium hover:underline">
-                        Bharat's Timeless Wisdom
-                    </a>
-                    .
-                </p>
-            </div>
 
-            {/* Quick Links */}
-            <div className="flex-1">
-                <h3 className="text-xl font-bold text-default mb-6">Quick links</h3>
-                <ul className="list-none space-y-3.5">
-                    <li>
-                        <a href="/aboutus" className="text-default no-underline text-sm ">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            Boards & Departments
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            National / International
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            Projects & Initiatives
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            Store
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                {/* Nav Links — scrollable on tiny screens */}
+                <nav className="flex flex-wrap gap-x-5 gap-y-2">
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link}
+                            href="#"
+                            className="text-sm underline underline-offset-2 transition-colors duration-200 text-default hover:text-primary"
+                        >
+                            {link}
+                        </Link>
+                    ))}
+                </nav>
 
-            {/* Get Involved */}
-            <div className="flex-1">
-                <h3 className="text-xl font-bold text-default mb-6">Get involved</h3>
-                <ul className="list-none space-y-3.5">
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            Sponsor and Donate
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/donate" className="text-default no-underline text-sm ">
-                            Donate Now
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            Become a Pratinidhi
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" className="text-default no-underline text-sm ">
-                            Affiliate and Partner
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            {/* Contact */}
-            <div className="flex-1">
-                <h3 className="text-xl font-bold text-default mb-6">Contact</h3>
-                <div className="flex items-center gap-3 mb-5">
-                    <Mail className='text-default' />
-                    <span className="text-default text-sm">info@vishwagurubharat.org</span>
-                </div>
+                {/* Social Icons */}
                 <div className="flex items-center gap-3">
-                    <Phone className='text-default' />
-                    <span className="text-default text-sm">9103544414, 8219278781</span>
+                    {[
+                        { icon: <Linkedin size={16} />, label: "LinkedIn" },
+                        { icon: <Facebook size={16} />, label: "Facebook" },
+                        { icon: <Twitter size={16} />, label: "Twitter" },
+                    ].map(({ icon, label }) => (
+                        <button
+                            key={label}
+                            aria-label={label}
+                            className="w-9 h-9 rounded-full flex items-center justify-center transition-all duration-200 bg-dark-soft text-default hover:bg-primary hover:text-dark"
+                        >
+                            {icon}
+                        </button>
+                    ))}
                 </div>
             </div>
-        </footer>
-    )
-}
 
-export default Footer
+            {/* ── Middle Row: Contact + Newsletter ── */}
+            <div className="flex flex-col justify-between lg:flex-row gap-6 mb-8 sm:mb-10">
+
+                {/* Contact Info */}
+                <div className="w-full lg:w-auto lg:flex-shrink-0">
+                    <span
+                        className="inline-block text-sm font-semibold px-3 py-1 rounded-full mb-4"
+                        style={{ backgroundColor: "#B1F363", color: "#1B1C24" }}
+                    >
+                        Contact us:
+                    </span>
+                    <div className="space-y-2">
+                        {[
+                            "Email: info@positivus.com",
+                            "Phone: 555-567-8901",
+                            "Address: 1234 Main St\nMoonstone City, Stardust State 12345",
+                        ].map((line, i) => (
+                            <p
+                                key={i}
+                                className="text-sm leading-relaxed whitespace-pre-line text-default"
+                            >
+                                {line}
+                            </p>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Newsletter */}
+                <div className="w-full lg:flex-1 flex items-center justify-center rounded-xl px-4 sm:px-6 py-5 sm:py-6 bg-dark-soft max-w-[700px]">
+                    <div className="flex flex-col  sm:flex-row gap-3 w-full">
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            onKeyDown={(e) => e.key === "Enter" && handleSubscribe()}
+                            className="flex-1 rounded-lg px-4 py-3 text-sm outline-none border transition-all duration-200 bg-transparent border-default text-default focus:border-primary placeholder:text-border"
+                        />
+                        <button
+                            onClick={handleSubscribe}
+                            className="w-full sm:w-auto px-5 py-3 rounded-lg text-sm font-semibold transition-all duration-200 whitespace-nowrap"
+                            style={{
+                                backgroundColor: subscribed ? "#6E9B37" : "#B1F363",
+                                color: "#1B1C24",
+                            }}
+                            onMouseEnter={(e) => !subscribed && (e.currentTarget.style.backgroundColor = "#CEF3A1")}
+                            onMouseLeave={(e) => !subscribed && (e.currentTarget.style.backgroundColor = "#B1F363")}
+                        >
+                            {subscribed ? "Subscribed ✓" : "Subscribe to news"}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Divider */}
+            <hr className="mb-5 border-dark-soft" />
+
+            {/* ── Bottom Row: Copyright / Privacy ── */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                <p className="text-sm text-border">
+                    © 2023 Positivus. All Rights Reserved.
+                </p>
+                <Link
+                    href="#"
+                    className="text-sm underline underline-offset-2 transition-colors duration-200 text-default hover:text-primary"
+                >
+                    Privacy Policy
+                </Link>
+            </div>
+
+        </footer>
+    );
+}

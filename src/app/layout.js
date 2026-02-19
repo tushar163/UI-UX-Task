@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >
         <div className=" sticky top-0 w-full z-50">
-          <Header />
+          {/* <Header /> */}
         </div>
         {children}
         <Footer />

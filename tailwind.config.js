@@ -18,32 +18,7 @@ module.exports = {
       lg: "1024px",
       xl: "1440px",
     },
-    extend: {
-      colors: {
-        primary: "#FF9933",
-        secondary: "#FFD700",
-        tertiary: "#4B6F44",
-        accent: "#1E3A8A",
-        default: "#333333",
-        info: "#666666"
-      }
-    },
   },
   darkMode: "class",
-  plugins: [heroui(
-    {
-      theme: {
-        extend: {
-          colors: {
-            primary: "#FF9933",
-            secondary: "#FFD700",
-            tertiary: "#4B6F44",
-            accent: "#1E3A8A",
-            default: "#333333",
-            info: "#666666"
-          }
-        }
-      }
-    }
-  )],
+   plugins: [heroui()],
 };

@@ -8,19 +8,34 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #B1F363;
+  --color-primary-light: #CEF3A1;
+  --color-primary-dark: #6E9B37;
+  --color-accent: #88B752;
 
-  /* ✅ ADD THESE COLORS HERE — NOT IN tailwind.config.js */
-  --color-primary: #20aefa;
-  --color-secondary: #FB923C ;
-  --color-tertiary: #DC2626 ;
-  --color-accent: #A855F7 ;
-  --color-default: #292524 ;
-  --color-info: #78716C ;
+  --color-dark: #1B1C24;
+  --color-dark-soft: #3A3B43;
+  --color-dark-card: #59595E;
 
+  /* testimonial cards */
+
+
+  --color-default: #F6F7F6;
+
+  --color-border: #A7A8A9;
+
+
+
+  --color-text-dark: #1B1C24;
+  --color-text-light: #59595E;
+  --color-white: #FFFFFF;
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-merriweather: var(--font-merriweather);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
