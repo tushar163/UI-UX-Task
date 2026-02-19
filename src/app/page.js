@@ -1,7 +1,10 @@
 import Banner from '@/components/Banner/Banner'
 import CaseStudies from '@/components/CaseStudies/CaseStudies';
+import ContactSection from '@/components/ContactUs/ContactUs';
 import CTASection from '@/components/CTASection/CTASection';
 import ServicesSection from '@/components/SeriveSection/ServicesSection';
+import TeamSection from '@/components/TeamSection/TeamSection';
+import TestimonialsSection from '@/components/TestimonialsSection/TestimonialsSection';
 import WorkingProcessSection from '@/components/WorkingProcessSection/WorkingProcessSection';
 import React from 'react'
 
@@ -39,6 +42,9 @@ function page() {
       <CTASection />
       <CaseStudies />
       <WorkingProcessSection />
+      <TeamSection />
+      <TestimonialsSection />
+      <ContactSection />
 
     </div>
   )

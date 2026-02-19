@@ -1,5 +1,4 @@
 "use client"
-import { Image } from "@heroui/react";
 import Link from "next/link";
 
 export default function HeroBanner() {
@@ -34,7 +33,7 @@ export default function HeroBanner() {
 
                 {/* ── Right: Hero Illustration ── */}
                 <div className="w-full md:w-1/2 flex items-center justify-center">
-                    <Image
+                    <img
                         src="/asserts/Bnner_image.webp"
                         alt="Digital marketing illustration showing a megaphone with social media icons representing SEO, PPC, and content creation services"
                         width={600}
