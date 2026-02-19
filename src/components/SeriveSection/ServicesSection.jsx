@@ -59,7 +59,7 @@ const services = [
     {
         id: 5,
         title: "Content Creation",
-        image: "/asserts/illustration-3.webp",
+        image: "/asserts/service.webp",
         imageAlt: "Content creation illustration",
         bg: "bg-primary",
         titleBg: "bg-white",
