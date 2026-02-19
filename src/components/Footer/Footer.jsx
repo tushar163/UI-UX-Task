@@ -46,29 +46,23 @@ export default function Footer() {
     return (
         <footer className="w-full px-4 sm:px-6 lg:px-10 py-8 sm:py-10 rounded-t-3xl bg-dark">
 
-            {/* ── Top Row: Logo / Nav / Socials ── */}
             <div className="flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center justify-between gap-5 mb-8 sm:mb-10">
 
-                {/* Logo */}
                 <div className="flex items-center gap-2">
                     <SparkleIcon />
                     <span className="text-white font-semibold text-xl tracking-tight">Positivus</span>
                 </div>
-
-                {/* Nav Links — scrollable on tiny screens */}
-                <nav className="flex flex-wrap gap-x-5 gap-y-2">
+                <nav className="flex flex-wrap gap-x-8 gap-y-2">
                     {navLinks.map((link) => (
                         <Link
                             key={link}
                             href="#"
-                            className="text-sm underline underline-offset-2 transition-colors duration-200 text-default hover:text-primary"
+                            className="text-sm lg:text-lg underline underline-offset-2 transition-colors duration-200 text-default hover:text-primary"
                         >
                             {link}
                         </Link>
                     ))}
                 </nav>
-
-                {/* Social Icons */}
                 <div className="flex items-center gap-3">
                     {[
                         { icon: <Linkedin size={16} />, label: "LinkedIn" },
@@ -85,11 +79,7 @@ export default function Footer() {
                     ))}
                 </div>
             </div>
-
-            {/* ── Middle Row: Contact + Newsletter ── */}
             <div className="flex flex-col justify-between lg:flex-row gap-6 mb-8 sm:mb-10">
-
-                {/* Contact Info */}
                 <div className="w-full lg:w-auto lg:flex-shrink-0">
                     <span
                         className="inline-block text-sm font-semibold px-3 py-1 rounded-full mb-4"
@@ -112,8 +102,6 @@ export default function Footer() {
                         ))}
                     </div>
                 </div>
-
-                {/* Newsletter */}
                 <div className="w-full lg:flex-1 flex items-center justify-center rounded-xl px-4 sm:px-6 py-5 sm:py-6 bg-dark-soft max-w-[700px]">
                     <div className="flex flex-col  sm:flex-row gap-3 w-full">
                         <input
@@ -139,11 +127,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-
-            {/* Divider */}
             <hr className="mb-5 border-dark-soft" />
-
-            {/* ── Bottom Row: Copyright / Privacy ── */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <p className="text-sm text-border">
                     © 2023 Positivus. All Rights Reserved.
