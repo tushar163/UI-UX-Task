@@ -28,10 +28,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased bg-default text-default`}
       >
         <div className=" sticky top-0 w-full z-50">
-          {/* <Header /> */}
+          <Header />
         </div>
         {children}
         <Footer />

@@ -2,7 +2,7 @@ import React from 'react'
 
 function page() {
   return (
-    <div className='min-h-screen flex items-center justify-center w-full'>
+    <div className='min-h-screen flex items-center bg-default justify-center w-full'>
       {/* <div className='h-[700px] relative overflow-hidden bg-primary text-default'>
         <div className='absolute inset-0'>
           <div className='h-full w-full bg-'></div>
