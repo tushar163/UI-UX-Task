@@ -4,12 +4,12 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 const SparkleIcon = () => (
-    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+    <svg width="40" height="40" viewBox="0 0 32 32" fill="none" className="rotate-[35rad]">
         <path
             d="M16 1 L18.2 13.8 L31 16 L18.2 18.2 L16 31 L13.8 18.2 L1 16 L13.8 13.8 Z"
             fill="#1B1C24"
         />
-        <circle cx="16" cy="16" r="2.5" fill="#F6F7F6" opacity="0.4" />
+        <circle cx="16" cy="16" r="2.5" fill="#1B1C24" opacity="0.4" />
     </svg>
 );
 
@@ -20,10 +20,10 @@ export default function Header() {
 
     return (
         <header className="w-full bg-default px-4 sm:px-6 lg:px-10">
-            <div className="max-w-7xl mx-auto flex items-center justify-between h-16 sm:h-20">
+            <div className="max-w-[1480px] mx-auto flex items-center justify-between h-16 sm:h-20">
 
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+                <Link href="/" className="flex items-center gap-2 shrink-0">
                     <SparkleIcon />
                     <span className="text-dark font-semibold text-xl tracking-tight">Positivus</span>
                 </Link>

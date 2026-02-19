@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const SparkleIcon = () => (
-    <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+    <svg width="40" height="40" viewBox="0 0 32 32" fill="none" className="rotate-[35rad]">
         {/* 4-pointed sparkle star */}
         <path
             d="M16 2 C16 2, 17.5 10, 16 16 C16 16, 10 17.5, 2 16 C2 16, 10 14.5, 16 16 C16 16, 14.5 8, 16 2Z"
